@@ -1,0 +1,12 @@
+services:
+  graphql-server:
+    build: .
+    container_name: graphql-todo-api
+    ports: 
+      - "4000:4000"
+    command: ["tail", "-f", "/dev/null"]
+    volumes:
+      - .:/app
+      - /app/node_modules
+    environment:
+      - NODE_ENV=development
