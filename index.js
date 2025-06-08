@@ -70,7 +70,7 @@ const resolvers = {
             return todo;
         },
         deleteTodo: (_, {id}) => {
-            const todos = readTodos();
+            let todos = readTodos();
             todos = todos.filter(t => t.id !== id);
             writeTodos(todos);
             return `Todo with id ${id} deleted.`;

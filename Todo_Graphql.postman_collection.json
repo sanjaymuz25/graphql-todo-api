@@ -121,6 +121,32 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "DeleteTodo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "mutation DeleteTodo($id: ID!) {\r\n    deleteTodo(id: $id)\r\n}\r\n",
+						"variables": "{\r\n    \"id\": \"1749371580360\"\r\n}"
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
 		}
 	]
 }
